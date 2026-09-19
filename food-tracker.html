@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Tracker · DineCom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVIGATION ===== -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#" class="logo">DineCom</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Restaurants</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#" class="active">Food Tracker</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Booking</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page">
+
+    <!-- ===== INTRO ===== -->
+    <section class="intro">
+      <h1>Food Tracker</h1>
+      <p class="subtitle">Track your meals, stay healthy.</p>
+    </section>
+
+    <!-- ===== CALORIE SUMMARY ===== -->
+    <section class="summary-card">
+      <div class="summary-stats">
+        <div class="stat">
+          <span class="stat-label">Total Calories</span>
+          <span class="stat-value" id="totalCalories">0 kcal</span>
+        </div>
+        <div class="stat stat-goal">
+          <span class="stat-label">Daily Goal</span>
+          <span class="stat-value" id="dailyGoal">2,000 kcal</span>
+        </div>
+      </div>
+
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <p class="progress-note" id="progressNote">0% of your daily goal</p>
+    </section>
+
+    <!-- ===== TRACKED FOODS ===== -->
+    <section class="tracked-section">
+      <div class="section-heading">
+        <h2>Tracked Foods</h2>
+        <button class="btn-clear" id="clearTrackerBtn">Clear Tracker</button>
+      </div>
+
+      <div class="food-list" id="foodList">
+        <!-- Tracked food rows are rendered here by script.js -->
+      </div>
+
+      <p class="empty-message" id="emptyMessage">No foods tracked yet. Add something below to get started.</p>
+    </section>
+
+    <!-- ===== ADD MORE FOOD ===== -->
+    <section class="add-food-section">
+      <h2>Add More Food</h2>
+      <div class="add-food-form">
+        <input
+          type="text"
+          id="foodSearch"
+          class="food-search"
+          placeholder="Search for a food..."
+          autocomplete="off"
+        >
+        <select id="foodSelect" class="food-select">
+          <!-- Options are rendered here by script.js -->
+        </select>
+        <button class="btn-primary" id="addFoodBtn">Add</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
